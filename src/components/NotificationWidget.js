@@ -5,10 +5,10 @@ import MenuItem from '@material-ui/core/MenuItem'
 import Menu from '@material-ui/core/Menu'
 import NotificationsIcon from '@material-ui/icons/Notifications'
 import { Button } from '@material-ui/core'
-// import classes from '*.module.css'
 import { makeStyles } from '@material-ui/core/styles'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward'
 
+// THIS IS WHERE DEVELOPER CAN CHANGE THE STYLES OF ALL PROPERTIES WITH CSS IN JS
 const useStyles = makeStyles({
   root: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
@@ -29,10 +29,15 @@ const useStyles = makeStyles({
   },
   buttonStyle: {
     width: '100%',
-    backgroundColor: 'grey',
+    color: 'white',
   },
   borderBottom: {
     borderBottom: '1px solid grey',
+  },
+  bottomLink: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 })
 
@@ -59,6 +64,7 @@ export default function NotificationWidget({
         color='inherit'
         onClick={handleClick}
       >
+        {/* THIS BADGE DISPLAYS THE UNREAD NOTIFICATIONS */}
         <Badge badgeContent={unreadNotificationsLength} color='secondary'>
           <NotificationsIcon />
         </Badge>
@@ -70,32 +76,52 @@ export default function NotificationWidget({
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
+        {/* CLICKING ON THIS BUTTON WILL MAKE ALL NOTIFICATIONS AS READ */}
+
         <Button
           className={classes.buttonStyle}
           variant='contained'
+          color='primary'
           onClick={makeAllRead}
         >
           Make all as read
         </Button>
+        {/* WE ARE MAPPING OVER THE DATA PROP BELOW */}
+
         {data.map((item, index) => (
           <MenuItem
             onClick={handleClose}
             className={classes.borderBottom}
             key={index}
           >
-            <div className={classes.menuItemContainer}>
+            {/* DISPLAYING A VERY OBVIOUS STYLE FOR CONSITIONALLY CHECKING THE READ
+            AND UNREAD NOTIFICATIONS */}
+            <div
+              className={classes.menuItemContainer}
+              style={{ backgroundColor: item.read ? '#afffb0' : '#ffd9d9' }}
+            >
               <h3>{item.heading}</h3>
               <p>{item.body}</p>
-              <a
-                href={item.link}
-                target='_blank'
-                className={classes.link}
-                rel='noopener noreferrer'
-              >
-                Link <ArrowForwardIcon />
-              </a>
+              {/* CLICKING ON THIS LINK WILL OPEN IN A NEW TAB */}
+              <div className={classes.bottomLink}>
+                {/* THIS ELEMENT DISPLAYS THE READ AND UNREAD STATE WITH A CONDITIONAL CHECK.*/}
+                <span>
+                  {item.read ? (
+                    <span>read✅✅✅</span>
+                  ) : (
+                    <span>unread❌❌❌</span>
+                  )}
+                </span>
+                <a
+                  href={item.link}
+                  target='_blank'
+                  className={classes.link}
+                  rel='noopener noreferrer'
+                >
+                  Link <ArrowForwardIcon />
+                </a>
+              </div>
             </div>
-            <span>{item.read ? 'read' : 'unread'}</span>
           </MenuItem>
         ))}
       </Menu>

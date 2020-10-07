@@ -4,7 +4,7 @@ let JSONdata = [
     link: 'https://google.com',
     heading: 'this is the heading',
     body: 'this is the bodythis is the bodythis is the bodythis is the body',
-    read: true,
+    read: false,
   },
 
   {
