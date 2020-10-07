@@ -107,9 +107,9 @@ export default function NotificationWidget({
                 {/* ⏰⏰⏰⏰⏰⏰⏰ THIS ELEMENT DISPLAYS THE READ AND UNREAD STATE WITH A CONDITIONAL CHECK.*/}
 
                 {item.read ? (
-                  <span>read✅✅✅</span>
+                  <span role='img'>read✅✅✅</span>
                 ) : (
-                  <span>unread❌❌❌</span>
+                  <span role='img'>unread❌❌❌</span>
                 )}
                 <a
                   href={item.link}
