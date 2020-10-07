@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
-// THIS IS WHERE DEVELOPER CAN CHANGE THE STYLES OF ALL PROPERTIES WITH CSS IN JS
+// ⏰⏰⏰⏰⏰⏰⏰THIS IS WHERE DEVELOPER CAN CHANGE THE STYLES OF ALL PROPERTIES WITH CSS IN JS
 const useStyles = makeStyles({
   readmeText: {
     textAlign: 'left',
@@ -14,7 +14,7 @@ export default function Readme() {
   const classes = useStyles()
 
   return (
-    // THIS IS THE FEATURE LIST
+    // ⏰⏰⏰⏰⏰⏰⏰THIS IS THE FEATURE LIST
 
     <div className={classes.readmeText}>
       <h3>

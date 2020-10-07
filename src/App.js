@@ -5,17 +5,17 @@ import NotificationWidget from './components/NotificationWidget'
 import Readme from './components/Readme'
 
 function App() {
-  // SETTING THE DATA STATE TO THE JSON DATA(WE CAN ALSO SET TO FETCHED DATA IN USESTATE)
+  // ⏰⏰⏰⏰⏰⏰⏰SETTING THE DATA STATE TO THE JSON DATA(WE CAN ALSO SET TO FETCHED DATA IN USESTATE)
 
   const [data, setdata] = useState(JSONdata)
 
-  // GET A COUNT OF UNREAD NOTIFICATIONS
+  // ⏰⏰⏰⏰⏰⏰⏰GET A COUNT OF UNREAD NOTIFICATIONS
 
   let unreadNotifications = data.filter(function (number) {
     return number.read === false
   })
 
-  // MAKE ALL NOTIFICATIONS AS READ
+  // ⏰⏰⏰⏰⏰⏰⏰MAKE ALL NOTIFICATIONS AS READ
   let makeAllRead = () => {
     let tempArray = []
     for (let index = 0; index < data.length; index++) {
@@ -30,8 +30,8 @@ function App() {
 
   return (
     <div className='App'>
-      {/* THIS IS THE REUSABLE COMPONENT  */}
-      {/* WE NEED TO PASS THE DATA AND IT TAKES CARE OF ALL OTHER THINGS FROM THE RESPECTIVE  FUNCTIONS */}
+      {/* ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️ THIS IS THE REUSABLE COMPONENT  */}
+      {/* ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️ WE NEED TO PASS THE DATA AND IT TAKES CARE OF ALL OTHER THINGS FROM THE RESPECTIVE  FUNCTIONS */}
       <NotificationWidget
         data={data}
         unreadNotificationsLength={unreadNotifications.length}

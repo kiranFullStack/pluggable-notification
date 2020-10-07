@@ -8,7 +8,7 @@ import { Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward'
 
-// THIS IS WHERE DEVELOPER CAN CHANGE THE STYLES OF ALL PROPERTIES WITH CSS IN JS
+// ⏰⏰⏰⏰⏰⏰⏰THIS IS WHERE DEVELOPER CAN CHANGE THE STYLES OF ALL PROPERTIES WITH CSS IN JS
 const useStyles = makeStyles({
   root: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
@@ -64,7 +64,7 @@ export default function NotificationWidget({
         color='inherit'
         onClick={handleClick}
       >
-        {/* THIS BADGE DISPLAYS THE UNREAD NOTIFICATIONS */}
+        {/* ⏰⏰⏰⏰⏰⏰⏰ THIS BADGE DISPLAYS THE UNREAD NOTIFICATIONS */}
         <Badge badgeContent={unreadNotificationsLength} color='secondary'>
           <NotificationsIcon />
         </Badge>
@@ -76,7 +76,7 @@ export default function NotificationWidget({
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        {/* CLICKING ON THIS BUTTON WILL MAKE ALL NOTIFICATIONS AS READ */}
+        {/* ⏰⏰⏰⏰⏰⏰⏰ CLICKING ON THIS BUTTON WILL MAKE ALL NOTIFICATIONS AS READ */}
 
         <Button
           className={classes.buttonStyle}
@@ -86,7 +86,7 @@ export default function NotificationWidget({
         >
           Make all as read
         </Button>
-        {/* WE ARE MAPPING OVER THE DATA PROP BELOW */}
+        {/* ⏰⏰⏰⏰⏰⏰⏰ WE ARE MAPPING OVER THE DATA PROP BELOW */}
 
         {data.map((item, index) => (
           <MenuItem
@@ -94,7 +94,7 @@ export default function NotificationWidget({
             className={classes.borderBottom}
             key={index}
           >
-            {/* DISPLAYING A VERY OBVIOUS STYLE FOR CONSITIONALLY CHECKING THE READ
+            {/* ⏰⏰⏰⏰⏰⏰⏰ DISPLAYING A VERY OBVIOUS STYLE FOR CONDITIONALLY CHECKING THE READ
             AND UNREAD NOTIFICATIONS */}
             <div
               className={classes.menuItemContainer}
@@ -102,16 +102,15 @@ export default function NotificationWidget({
             >
               <h3>{item.heading}</h3>
               <p>{item.body}</p>
-              {/* CLICKING ON THIS LINK WILL OPEN IN A NEW TAB */}
+              {/* ⏰⏰⏰⏰⏰⏰⏰ CLICKING ON THIS LINK WILL OPEN IN A NEW TAB */}
               <div className={classes.bottomLink}>
-                {/* THIS ELEMENT DISPLAYS THE READ AND UNREAD STATE WITH A CONDITIONAL CHECK.*/}
-                <span>
-                  {item.read ? (
-                    <span>read✅✅✅</span>
-                  ) : (
-                    <span>unread❌❌❌</span>
-                  )}
-                </span>
+                {/* ⏰⏰⏰⏰⏰⏰⏰ THIS ELEMENT DISPLAYS THE READ AND UNREAD STATE WITH A CONDITIONAL CHECK.*/}
+
+                {item.read ? (
+                  <span>read✅✅✅</span>
+                ) : (
+                  <span>unread❌❌❌</span>
+                )}
                 <a
                   href={item.link}
                   target='_blank'
