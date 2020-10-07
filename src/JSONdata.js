@@ -4,7 +4,7 @@ let JSONdata = [
     link: 'https://google.com',
     heading: 'this is the heading',
     body: 'this is the bodythis is the bodythis is the bodythis is the body',
-    read: false,
+    read: true,
   },
 
   {
@@ -41,6 +41,27 @@ let JSONdata = [
     heading: 'this is the heading',
     body: 'this is the body',
     read: false,
+  },
+  {
+    id: '2345098789027',
+    link: 'https://google.com',
+    heading: 'this is the heading',
+    body: 'this is the body',
+    read: false,
+  },
+  {
+    id: '2345098789027',
+    link: 'https://google.com',
+    heading: 'this is the heading',
+    body: 'this is the body',
+    read: false,
+  },
+  {
+    id: '2345098789027',
+    link: 'https://google.com',
+    heading: 'this is the heading',
+    body: 'this is the body',
+    read: true,
   },
 ]
 
