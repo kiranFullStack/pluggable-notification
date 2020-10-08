@@ -1,7 +1,7 @@
 let JSONdata = [
   {
     id: '234526378454327',
-    link: 'https://kiranfillstack.com',
+    link: 'https://kiranfullstack.com',
     heading: 'Visit my website',
     body: 'Checkout my skills, experience, resume and social links',
     read: true,
