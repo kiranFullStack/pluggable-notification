@@ -23,7 +23,7 @@ let JSONdata = [
   },
   {
     id: '2345263784598767',
-    link: 'https://kiranfullstack.com/images/Kiran_FullStack_Resume.pdf',
+    link: 'https://kiranfullstack.com/#resume',
     heading: 'Download my resume here',
     body: 'Checkout my experience and skills',
     read: false,
